@@ -25,15 +25,15 @@
 </nav>
 
 <!-- MAIN -->
-<div class="container mt-5 pb-5 d-flex align-items-center"
+<div class="container mt-5 pb-5 d-flex align-items-center justify-content-center"
      style="max-width: 70%; min-height: 80vh;">
 
-    <div class="row w-100">
+    <div class="row align-items-start w-100 mx-0">
 
         <!-- IMAGE -->
-        <div class="col-md-6 d-none d-md-block">
+        <div class="col-md-6 text-center d-none d-md-block">
             <img src="{{ url_for('static', filename='images/login.svg') }}"
-                 class="img-fluid" alt="Sign-up illustration">
+                 class="img-fluid" alt="Sign-up illustration" style="max-width: 110%;">
         </div>
 
         <!-- FORM -->
@@ -41,14 +41,14 @@
 
             <h1 class="display-4 mb-4">Sign Up</h1>
 
-            <!-- 🔥 ERROR MESSAGE -->
+            <!-- ERROR MESSAGE -->
             {% if error %}
             <div class="alert alert-danger">
                 {{ error }}
             </div>
             {% endif %}
 
-            <!-- 🔥 IMPORTANT -->
+            <!-- IMPORTANT -->
             <form method="POST" action="{{ url_for('signup') }}">
 
                 <!-- EMAIL -->
